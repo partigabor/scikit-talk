@@ -36,13 +36,38 @@ If the corpus provides timestamps, begin and end will contain these in a pandas.
 We assume that the corpora and files are formatted perfectly, adhering to the requirements of various standards and conventions (e.g. Linguistic Data Consortium).
 
 * Free software: MIT license
-* Documentation: https://scikit-talk.readthedocs.io.
 * GitHub: https://github.com/partigabor/scikit_talk
 
 Features
 --------
 
 * Preprocessor
+
+Usage:
+
+``cha_to_dataframe(path_in, *path_out)``
+    This function reads .cha files, transcriptions of speech that were produced in the CHAT format. 
+    
+``eaf_to_dataframe(path_in, *path_out)``
+    This function reads .eaf files, transcriptions of speech that were produced in the ELAN format. 
+    
+``def ldc_to_dataframe(path_in, *path_out)``
+    This function reads .txt files, transcriptions of speech that were produced in the LDC format. 
+    
+All three function shall have the same output:
+The function takes the files, reads and appends them one by one, line by line, and returns one dataframe.
+The function takes two arguments: an input path (e.g. path_in) and an output path (e.g. path_out), where the latter is optional.
+
+If you only give the input path (path_in), the function returns a pandas dataframe object.
+If you give the optional output path (path_out) as well, the function writes the dataframe into that path, as a .csv file.
+path_in should be a string, pointing to a folder where .cha files are located. Example: path_in = '/folder/'
+path_out should be a string, pointing to a folder where you want your dataset written. Example: path_out = '/folder/output/'
+You have to make this output directory yourself before calling the function.
+
+Overall, calling a function should look like the following:
+    preprocessor.ldc_to_dataframe(path_in)
+    OR
+    preprocessor.ldc_to_dataframe(path_in, path_out)
 
 Credits
 -------
