@@ -15,7 +15,7 @@ scikit-talk
 
 ===========
 
-# [UPDATE]:  scikit-talk is maintained and continues to be developed here: https://github.com/elpaco-escience/scikit-talk
+# *[UPDATE]:*  scikit-talk is maintained and continues to be developed here: https://github.com/elpaco-escience/scikit-talk
 
 ===========
 
