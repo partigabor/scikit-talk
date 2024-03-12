@@ -17,7 +17,7 @@ scikit-talk
 
 ## [UPDATE]:  scikit-talk is maintained and continues to be developed here: https://github.com/elpaco-escience/scikit-talk
 
-***
+===========
 
 Scikit-talk helps to process real-world conversational speech data.
 
